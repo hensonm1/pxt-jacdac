@@ -31,7 +31,7 @@ struct LedInfo {
     target_panic(901)
 #endif
 
-#ifndef MICROBIT_CODAL
+#if !defined(MICROBIT_CODAL) || !MICROBIT_CODAL
 static LedInfo leds[3];
 static uint8_t led_init;
 
@@ -92,7 +92,7 @@ static void setup_pwm_pin(LedInfo *led) {
 
 //%
 void _setLedChannel(int ch, uint16_t val) {
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
     // TODO?
 #else
     if (!led_init) {

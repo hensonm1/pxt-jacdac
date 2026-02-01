@@ -227,7 +227,7 @@ void uart_init_() {
         return;
     }
 
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
     sws = new ZSingleWireSerial(uBit.io.P12);
 #else
     sws = new ZSingleWireSerial(*LOOKUP_PIN(JACK_TX));

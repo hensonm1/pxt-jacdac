@@ -2,7 +2,7 @@
 #include "jdlow.h"
 #include "mbbridge.h"
 
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
 
 #if CONFIG_ENABLED(DEVICE_BLE) && CONFIG_ENABLED(JACDAC_BLE_TRANSPORT)
 

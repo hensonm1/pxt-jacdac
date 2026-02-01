@@ -1,7 +1,7 @@
 #ifndef __MBBRIDGE_H
 #define __MBBRIDGE_H
 
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
 namespace pxt {
 extern void (*logJDFrame)(const uint8_t *data);
 extern void (*sendJDFrame)(const uint8_t *data);
