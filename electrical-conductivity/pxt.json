@@ -1,6 +1,6 @@
 {
     "name": "jacdac-electrical-conductivity",
-    "version": "1.9.40",
+    "version": "1.9.41",
     "description": "A sensor that measures electrical conductivity (EC) of a medium.",
     "files": [
         "constants.ts",
