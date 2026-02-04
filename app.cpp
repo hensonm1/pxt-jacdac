@@ -207,7 +207,7 @@ extern "C" int jd_pin_num() {
 void __physStart() {
     jd_init();
     sendJDFrame = sendExtFrame;
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
 #if CONFIG_ENABLED(DEVICE_BLE) && CONFIG_ENABLED(JACDAC_BLE_TRANSPORT)
     jdble_init();
 #else

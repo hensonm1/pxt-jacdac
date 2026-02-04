@@ -2,7 +2,7 @@
 #include "jdlow.h"
 #include "mbbridge.h"
 
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
 
 namespace pxt {
 void (*logJDFrame)(const uint8_t *data);

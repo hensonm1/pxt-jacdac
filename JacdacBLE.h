@@ -1,7 +1,7 @@
 #ifndef JACDAC_BLE_SERVICE_H
 #define JACDAC_BLE_SERVICE_H
 
-#ifdef MICROBIT_CODAL
+#if defined(MICROBIT_CODAL) && MICROBIT_CODAL
 
 #include "MicroBitConfig.h"
 
