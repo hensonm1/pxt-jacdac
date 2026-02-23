@@ -81,6 +81,8 @@ namespace modules {
         //% pin.defl=0
         configure(pin: number, mode: jacdac.GPIOMode): void {
             this.start()
+            // ensure device is connected before sending
+            this._numPins.pauseUntilValues()
             const buf = control.createBuffer(2)
             buf[0] = pin
             buf[1] = mode
@@ -120,6 +122,7 @@ namespace modules {
         //% pin.defl=0
         requestPinInfo(pin: number): void {
             this.start()
+            this._numPins.pauseUntilValues()
             const buf = control.createBuffer(1)
             buf[0] = pin
             this.sendCommand(
@@ -135,6 +138,7 @@ namespace modules {
         //% weight=93
         requestPinByLabel(label: string): void {
             this.start()
+            this._numPins.pauseUntilValues()
             this.sendCommand(
                 jacdac.JDPacket.jdpacked(
                     jacdac.GPIOCmd.PinByLabel,
@@ -152,6 +156,7 @@ namespace modules {
         //% weight=92
         requestPinByHwPin(hwPin: number): void {
             this.start()
+            this._numPins.pauseUntilValues()
             const buf = control.createBuffer(1)
             buf[0] = hwPin
             this.sendCommand(
