@@ -1,22 +1,25 @@
 {
     "name": "jacdac-gpio",
-    "version": "0.0.0",
+    "version": "1.9.41",
     "description": "Access to General Purpose Input/Output (GPIO) pins on a board.\nThe pins are indexed `0 ... num_pins-1`.\nThe indexing does not correspond to hardware pin names, nor labels on the board (see `get_pin_info` command for that),\nand should **not** be exposed to the user.",
     "files": [
         "constants.ts",
-        "client.g.ts"
+        "client.ts",
+        "clients.ts",
+        "_locales/de/jacdac-gpio-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "supportedTargets": [
-        "microbit",
         "arcade",
+        "microbit",
         "maker",
         "calliopemini"
     ],
     "dependencies": {
         "core": "*",
         "jacdac": "github:hensonm1/pxt-jacdac"
-    }
+    },
+    "testDependencies": {}
 }

@@ -108,7 +108,7 @@ namespace modules {
          */
         //% callInDebugger
         //% group="Button"
-        //% block="%button hold duration (ms) test"
+        //% block="%button hold duration (ms)"
         //% blockId=jacdac_button_hold_duration_get
         //% weight=95
         holdDuration(): number {
