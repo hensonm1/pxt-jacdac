@@ -15,7 +15,7 @@ namespace modules {
                 jacdac.ButtonReg.Analog,
                 jacdac.ButtonRegPack.Analog,
                 jacdac.RegisterClientFlags.Optional |
-                    jacdac.RegisterClientFlags.Const
+                jacdac.RegisterClientFlags.Const
             )
 
             this.on(jacdac.EVENT, pkt => this.handleEvent(pkt))
@@ -108,7 +108,7 @@ namespace modules {
          */
         //% callInDebugger
         //% group="Button"
-        //% block="%button hold duration (ms)"
+        //% block="%button hold duration (ms) test"
         //% blockId=jacdac_button_hold_duration_get
         //% weight=95
         holdDuration(): number {
