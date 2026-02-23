@@ -5,8 +5,7 @@
     "files": [
         "constants.ts",
         "client.ts",
-        "clients.ts",
-        "_locales/de/jacdac-gpio-strings.json"
+        "clients.ts"
     ],
     "testFiles": [
         "test.ts"
