@@ -30,7 +30,9 @@ namespace modules {
         //% weight=100
         state(): Buffer {
             this.setStreaming(true)
-            const values = this._reading.pauseUntilValues() as any[]
+            const values = this._reading.pauseUntilValues(
+                this.readingTimeout
+            ) as any[]
             return values[0]
         }
 
